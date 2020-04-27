@@ -1,6 +1,6 @@
 [![NuGet](https://img.shields.io/nuget/v/Nhea.Data.Repository.EntityFrameworkCoreRepository.svg)](https://www.nuget.org/packages/Nhea.Data.Repository.EntityFrameworkCoreRepository/)
 
-# Nhea Entity Framework Repository
+# Nhea Entity Framework Core Repository
 
 Nhea base repository classes for EF Core
 
@@ -14,6 +14,10 @@ https://www.nuget.org/packages/Nhea.Data.Repository.EntityFrameworkCoreRepositor
 ### Prerequisites
 
 Project is built with .NET Standard 2.0
+
+This project references 
+-	Nhea > 1.5.5
+-	Microsoft.EntityFrameworkCore > 2.2.0
 
 ### Configuration
 
