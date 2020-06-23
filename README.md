@@ -13,11 +13,11 @@ https://www.nuget.org/packages/Nhea.Data.Repository.EntityFrameworkCoreRepositor
 
 ### Prerequisites
 
-Project is built with .NET Standard 2.0
+Project is built with .NET Standard 2.1
 
 This project references 
--	Nhea > 1.5.5
--	Microsoft.EntityFrameworkCore > 2.2.0
+-	Nhea > 2.0.0.4
+-	Microsoft.EntityFrameworkCore >= 3.1.5
 
 ### Configuration
 
