@@ -22,10 +22,10 @@ namespace Nhea.Data.Repository.EntityFrameworkCoreRepository
             {
                 var context = CurrentContext;
 
-                if (this.IsReadOnly)
-                {
-                    context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-                }
+                //if (this.IsReadOnly)
+                //{
+                //    context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+                //}
 
                 return context;
             }
@@ -49,6 +49,18 @@ namespace Nhea.Data.Repository.EntityFrameworkCoreRepository
             }
         }
 
+        private IQueryable<T> GetQueryableObjectSet()
+        {
+            var queryable = CurrentObjectSet.AsQueryable();
+
+            if (this.IsReadOnly)
+            {
+                queryable = queryable.AsNoTracking();
+            }
+
+            return queryable;
+        }
+
         #region GetSingle
 
         protected override T GetSingleCore(Expression<Func<T, bool>> filter, bool getDefaultFilter)
@@ -62,7 +74,7 @@ namespace Nhea.Data.Repository.EntityFrameworkCoreRepository
 
             if (filter != null)
             {
-                entity = CurrentObjectSet.SingleOrDefault(filter);
+                entity = GetQueryableObjectSet().SingleOrDefault(filter);
             }
 
             return entity;
@@ -79,7 +91,7 @@ namespace Nhea.Data.Repository.EntityFrameworkCoreRepository
 
             if (filter != null)
             {
-                entity = await CurrentObjectSet.SingleOrDefaultAsync(filter);
+                entity = await GetQueryableObjectSet().SingleOrDefaultAsync(filter);
             }
 
             return entity;
@@ -93,7 +105,7 @@ namespace Nhea.Data.Repository.EntityFrameworkCoreRepository
         {
             filter = SetFilter(filter, getDefaultFilter);
 
-            IQueryable<T> returnList = CurrentObjectSet.Where(filter);
+            IQueryable<T> returnList = GetQueryableObjectSet().Where(filter);
 
             if (!String.IsNullOrEmpty(sortColumn))
             {
