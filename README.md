@@ -66,7 +66,7 @@ public class MemberRepository : BaseSqlRepository<Member>
     }
 ```
 
-Then in your code just initalize a new instance of your class and call appropriate methods for your needs.
+Then in your code just initialize a new instance of your class and call appropriate methods for your needs.
 
 ```
 //Create new record
