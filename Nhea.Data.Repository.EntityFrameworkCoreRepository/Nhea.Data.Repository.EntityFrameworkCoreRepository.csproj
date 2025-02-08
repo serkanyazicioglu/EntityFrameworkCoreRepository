@@ -1,25 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net6.0</TargetFramework>
-		<Version>4.0.0</Version>
+		<TargetFramework>net9.0</TargetFramework>
+		<Version>5.0.1</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Serkan Yazıcıoğlu</Authors>
 		<Company>Serkan Yazıcıoğlu</Company>
-		<Description>.Net standard repository library for Entity Framework Core</Description>
+		<Description>.Net repository library for Entity Framework Core</Description>
 		<PackageProjectUrl>https://github.com/serkanyazicioglu/EntityFrameworkCoreRepository</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/serkanyazicioglu/EntityFrameworkCoreRepository</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>repository, nhea, ef, entityframework, efcore</PackageTags>
 		<PackageReleaseNotes>
-			Nhea EF Core Repository now uses EF Core 6.0
+			Nhea EF Core Repository now uses EF Core 9.0
 			- Updated related packages
 		</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
-		<PackageReference Include="Nhea" Version="3.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.1" />
+		<PackageReference Include="Nhea" Version="4.0.1" />
 	</ItemGroup>
 
 </Project>

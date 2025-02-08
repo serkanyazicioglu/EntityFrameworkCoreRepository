@@ -214,9 +214,9 @@ namespace Nhea.Data.Repository.EntityFrameworkCoreRepository
 
         public override void Delete(Expression<Func<T, bool>> filter)
         {
-            var entites = CurrentObjectSet.Where(filter);
+            var entities = CurrentObjectSet.Where(filter);
 
-            foreach (var entity in entites)
+            foreach (var entity in entities)
             {
                 CurrentContextWithOptions.Entry(entity).State = EntityState.Deleted;
             }
