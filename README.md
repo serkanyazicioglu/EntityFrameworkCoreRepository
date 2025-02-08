@@ -1,6 +1,5 @@
 [![.NET](https://github.com/serkanyazicioglu/EntityFrameworkCoreRepository/actions/workflows/dotnet-pipeline.yml/badge.svg)](https://github.com/serkanyazicioglu/EntityFrameworkCoreRepository/actions/workflows/dotnet-pipeline.yml)
 [![NuGet](https://img.shields.io/nuget/v/Nhea.Data.Repository.EntityFrameworkCoreRepository.svg)](https://www.nuget.org/packages/Nhea.Data.Repository.EntityFrameworkCoreRepository/)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=nhea_EntityFrameworkCoreRepository&metric=alert_status)](https://sonarcloud.io/project/overview?id=nhea_EntityFrameworkCoreRepository)
 
 # Nhea Entity Framework Core Repository
 
