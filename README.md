@@ -14,7 +14,7 @@ https://www.nuget.org/packages/Nhea.Data.Repository.EntityFrameworkCoreRepositor
 
 ### Prerequisites
 
-Project is built with .NET 9.0
+Project is built with .NET 10.0
 
 This project references 
 -	Nhea > 4.0.1.0
